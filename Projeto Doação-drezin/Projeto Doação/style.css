@@ -500,6 +500,14 @@ body {
     justify-content: center;
     position: relative;
   }
+
+
+
+  .frame .frame-wrapper {
+    top: 800px;
+    right: 100px;
+    position: absolute;
+  }
 }
 
 
