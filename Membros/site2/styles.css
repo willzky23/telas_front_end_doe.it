@@ -1,0 +1,210 @@
+/* Estilos globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf8f7;
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo h1 {
+    color: #5FCB69;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Contêiner da pesquisa */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Input de pesquisa com imagem de lupa */
+.search-container input {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 10px 10px 35px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #eaeaea;
+    background-image: url('lupa.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    color: #333;
+}
+
+/* Adicionando efeito ao foco do campo de pesquisa */
+.search-container input:focus {
+    outline: none;
+    border-color: #5FCB69;
+}
+
+/* Navegação e alinhamento */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    margin-right: 15px;
+}
+
+/* Botão "Criar Campanha" */
+nav ul li button {
+    background-color: #5FCB69;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav ul li button:hover {
+    background-color: #4ba354;
+}
+
+/* Seção de sobre */
+.about {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.about h2 {
+    color: #5FCB69;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.5em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Seção da equipe */
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Organizando os membros em 3 colunas */
+    gap: 40px;
+    justify-items: center;
+    padding: 50px 100px;
+}
+
+/* Estilo dos membros da equipe */
+.member {
+    width: 240px; /* Largura aumentada para acomodar o texto */
+    text-align: center;
+}
+
+/* Centralizar o último item (Francisco Kauan) */
+.member:last-child {
+    grid-column: 2 / 3;
+}
+
+/* Ajuste do contêiner de imagem do membro */
+.avatar {
+    width: 100%; /* Define a largura para 100% do contêiner */
+    height: 240px; /* Aumentando a altura para manter a proporção */
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse as bordas */
+    margin-bottom: 15px;
+    background-color: #eaeaea; /* Cor de fundo de fallback */
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para caber no contêiner sem distorção */
+    border-radius: 10px; /* Mantém a borda arredondada das imagens */
+}
+
+.member p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.member span {
+    background-color: #5FCB69;
+    color: white;
+    padding: 10px 15px; /* Aumentando o padding para expandir a área verde */
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1em;
+    width: 100%; /* Define a largura para 100% do contêiner */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    max-width: 240px; /* Garante que o botão verde fique centralizado e tenha a mesma largura que a imagem */
+    white-space: normal; /* Permite que o texto ocupe várias linhas se necessário */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .team {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 30px 50px;
+    }
+
+    .member {
+        width: 100%;
+    }
+
+    .avatar {
+        height: 200px; /* Ajuste proporcional da altura */
+    }
+
+    .member span {
+        font-size: 0.9em; /* Reduz o tamanho da fonte para caber em telas menores */
+        padding: 8px 10px; /* Ajuste do padding para manter a proporção */
+        max-width: 100%; /* Permite que o botão verde ocupe a largura total do contêiner do membro */
+    }
+}
+
+@media (max-width: 480px) {
+    .team {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .member {
+        width: 100%;
+    }
+
+    .avatar {
+        height: 180px; /* Ajuste adicional para telas muito pequenas */
+    }
+
+    .member span {
+        font-size: 0.8em; /* Reduz ainda mais em telas muito pequenas */
+        padding: 6px 8px; /* Ajuste do padding para manter a proporção */
+    }
+}
