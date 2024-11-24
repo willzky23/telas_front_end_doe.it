@@ -1,0 +1,1 @@
+<p>Telas de um projeto de doação, visando ajudar pessoas com recursos básicos do dia a dia. O projeto conta com diversos integrantes disponíveis para o desenvolvimento e melhorias do site. O site inclui diversas telas e também um gerador de QR Code para confirmação de doações.</p>
